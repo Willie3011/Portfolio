@@ -1,10 +1,9 @@
-import React from 'react'
-import Container from '../components/Container'
+import Banner from '../components/Banner'
 
 function Homepage() {
   return (
     <div className='bg-secondary h-screen font-Poppins'>
-      <Container>Hello world</Container>
+      <Banner/>
     </div>
   )
 }
