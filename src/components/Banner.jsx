@@ -2,7 +2,7 @@ import Container from './Container'
 
 function Banner() {
     return (
-        <div className="bg-primary text-white px-0 py-16 text-center flex items-center justify-center max-md:h-screen min-h-9/12">
+        <div className="bg-primary text-white px-0 py-16 text-center flex items-center justify-center min-h-200">
             <Container>
                 <h1 className='uppercase font-bold mb-4 text-[2rem] md:text-5xl'>Hey I'm Willem April</h1>
                 <p className='text-xl max-w-200 my-0 mx-auto text-secondary mb-4'>I am a passionate web developer who enjoys learning through building real-world projects. I’m constantly improving my skills while creating meaningful applications.</p>
