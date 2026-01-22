@@ -13,6 +13,8 @@ function About() {
                     `${import.meta.env.VITE_API_URL}/skills`,
                 ]
 
+                console.log(import.meta.env.VITE_API_URL)
+
                 const [aboutResponse, skillsResponse] = await Promise.all([
                     axios.get(endpoints[0]),
                     axios.get(endpoints[1]),
