@@ -13,6 +13,10 @@ function About() {
                     `${import.meta.env.VITE_API_URL}/skills`,
                 ]
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
                 const [aboutResponse, skillsResponse] = await Promise.all([
                     axios.get(endpoints[0]),
                     axios.get(endpoints[1]),
@@ -36,10 +40,14 @@ function About() {
     }, [])
 
     return (
-        <div className="my-16">
+        <div className="my-16 py-16">
             <Container>
                 <div className="flex flex-col gap-4 mb-8">
-                    <h2 className='uppercase font-bold text-3xl sm:text-4xl md:text-5xl text-gray-900 text-center before:content-[] before:h-2 before:w-1/3 before:bg-accent'>About Me</h2>
+                    <h2 className='relative uppercase font-bold text-3xl sm:text-4xl md:text-5xl text-gray-900 text-center pb-4'>
+                        About Me
+                        {/* Optional: Add decorative underline */}
+                        <span className='absolute bottom-0 left-1/2 transform -translate-x-1/2 h-1.5 w-15 bg-accent rounded-full'></span>
+                    </h2>
                     <p className='text-center max-w-200 text-primary ' >Here you will find more information about me, What I do, and my current skills mostly in terms of programming and technology.</p>
                 </div>
 
