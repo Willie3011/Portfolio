@@ -1,6 +1,7 @@
 import About from '../components/About'
 import Banner from '../components/Banner'
 import Navbar from '../components/Navbar'
+import ProjectsSection from '../components/ProjectsSection'
 
 function Homepage() {
   return (
@@ -8,7 +9,7 @@ function Homepage() {
       <Navbar />
       <Banner />
       <About />
-      
+      <ProjectsSection />
     </div>
   )
 }

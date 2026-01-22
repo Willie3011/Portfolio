@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Container from './Container'
 import axios from 'axios'
+import SectionHeading from './SectionHeading';
 
 function About() {
     const [paragraphs, setParagraphs] = useState([]);
@@ -38,14 +39,7 @@ function About() {
     return (
         <div className="my-16 py-16">
             <Container>
-                <div className="flex flex-col items-center gap-4 mb-8">
-                    <h2 className='relative uppercase font-bold text-3xl sm:text-4xl md:text-5xl text-gray-900 text-center pb-4'>
-                        About Me
-                        {/* Optional: Add decorative underline */}
-                        <span className='absolute bottom-0 left-1/2 transform -translate-x-1/2 h-1.5 w-15 bg-accent rounded-full'></span>
-                    </h2>
-                    <p className='text-center max-w-200 text-primary ' >Here you will find more information about me, What I do, and my current skills mostly in terms of programming and technology.</p>
-                </div>
+                <SectionHeading heading="About me" paragraph="Here you will find more information about me, What I do, and my current skills mostly in terms of programming and technology."/>
 
                 <div className="grid sm:grid-cols-2 gap-8 ">
                     {/* About me */}
