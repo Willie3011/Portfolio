@@ -38,7 +38,7 @@ function About() {
     return (
         <div className="my-16 py-16">
             <Container>
-                <div className="flex flex-col gap-4 mb-8">
+                <div className="flex flex-col items-center gap-4 mb-8">
                     <h2 className='relative uppercase font-bold text-3xl sm:text-4xl md:text-5xl text-gray-900 text-center pb-4'>
                         About Me
                         {/* Optional: Add decorative underline */}
