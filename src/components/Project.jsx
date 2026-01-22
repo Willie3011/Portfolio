@@ -4,12 +4,14 @@ import ImageComp from './ImageComp'
 
 function Project({project}) {
   return (
-    <div className='grid sm:grid-cols-2 gap-4 mb-8 m-4 '>
+    <div className='grid sm:grid-cols-2 gap-8 mb-8 m-4 '>
       {/* image */}
       <ImageComp
         src={project.image?.filePath}
-        w={400}
+        w={600}
         h={400}
+        className="object-contain"
+        
       />
       {/* project details */}
       <div className="flex flex-col gap-12">
