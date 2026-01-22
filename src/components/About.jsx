@@ -13,10 +13,6 @@ function About() {
                     `${import.meta.env.VITE_API_URL}/skills`,
                 ]
 
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
                 const [aboutResponse, skillsResponse] = await Promise.all([
                     axios.get(endpoints[0]),
                     axios.get(endpoints[1]),
