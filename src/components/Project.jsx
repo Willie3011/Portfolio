@@ -17,7 +17,7 @@ function Project({project}) {
       <div className="flex flex-col gap-12">
         <h3 className='capitalize font-bold text-2xl text-gray-900 tracking-tight'>{project.title}</h3>
         {/* short description */}
-        <p className='text-base font-medium text-primary text-ellipsis max-w-80 sm:max-w-100 text-justify'>{project.desc}</p>
+        <p className='text-base font-medium text-primary text-ellipsis max-w-80 sm:max-w-100 text-justify'>{project.shortDesc}</p>
         <Link to={`/project/${project._id}`} className='px-12 py-3 rounded-lg bg-accent hover:bg-amber-400 hover:shadow-lg w-fit font-medium text-white transition-all ease-in-out duration-300 hover:-translate-y-1 cursor-pointer'>View Project</Link>
       </div>
     </div>
