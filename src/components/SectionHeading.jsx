@@ -6,7 +6,7 @@ function SectionHeading({ heading, paragraph }) {
               {heading}
               <span className='absolute left-1/2 bottom-0 h-1.5 w-40 bg-linear-to-r from-transparent via-accent to-transparent -translate-x-1/2 transition-all duration-500 ease-out'></span>
           </h2>
-          <p className='text-center max-w-200 text-primary ' >{paragraph}</p>
+          <p className='text-center max-w-200 text-primary text-balance' >{paragraph}</p>
       </div>
   )
 }
