@@ -1,14 +1,27 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route, createBrowserRouter, RouterProvider } from "react-router-dom"
 import Homepage from "./pages/Homepage"
-import ProjectsPage from "./pages/ProjectPage"
+import ProjectPage from "./pages/ProjectPage"
+import MainLayout from "./layouts/MainLayout"
+
+const router = createBrowserRouter([
+  {
+    element: <MainLayout />,
+    children: [
+      {
+        path: '/',
+        element: <Homepage/>
+      },
+      {
+        path: "/project/:id",
+        element: <ProjectPage/>
+      }
+    ]
+  }
+])
+
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Homepage/>} />
-        <Route path="/project/:id" element={<ProjectsPage/>} />
-      </Routes>
-    </BrowserRouter>
+    <RouterProvider router={router}/>
   )
 }
 

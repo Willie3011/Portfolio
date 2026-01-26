@@ -6,7 +6,6 @@ import ProjectsSection from '../components/ProjectsSection'
 function Homepage() {
   return (
     <div className='bg-secondary h-full font-Poppins'>
-      <Navbar />
       <Banner />
       <About />
       <ProjectsSection />
