@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Container from './Container'
 import axios from 'axios'
 import SectionHeading from './SectionHeading';
+import parse from 'html-react-parser';
 
 function About() {
     const [paragraphs, setParagraphs] = useState([]);
@@ -49,7 +50,7 @@ function About() {
                             {
                                 paragraphs && (
                                     paragraphs.map(paragraph => {
-                                        return <p className='text-primary' key={paragraph}>{paragraph}</p>
+                                        return <p className='text-primary' key={paragraph}>{parse(paragraph)}</p>
                                     })
                                 )
                             }
