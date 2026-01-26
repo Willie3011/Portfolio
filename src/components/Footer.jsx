@@ -18,7 +18,6 @@ function Footer() {
         getData();
     }, [])
 
-    console.log(socials)
     return (
         <div className="bg-primary text-white min-h-60 h-fit">
             <Container>
