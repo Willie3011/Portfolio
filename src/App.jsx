@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, createBrowserRouter, RouterProvider } fro
 import Homepage from "./pages/Homepage"
 import ProjectPage from "./pages/ProjectPage"
 import MainLayout from "./layouts/MainLayout"
+import ProjectsPage from "./pages/ProjectsPage"
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
       {
         path: "/project/:id",
         element: <ProjectPage/>
+      },
+      {
+        path: "projects",
+        element: <ProjectsPage/>
       }
     ]
   }

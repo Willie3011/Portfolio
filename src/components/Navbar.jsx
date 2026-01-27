@@ -21,7 +21,7 @@ function Navbar() {
                                 <Link to="/" className='uppercase text-white font-medium px-4 py-2 hover:bg-gray-200/10 hover:text-accent transition-all duration-300 rounded-sm'>About</Link>
                             </li>
                             <li className='ml-8'>
-                                <Link to="/" className='uppercase text-white font-medium px-4 py-2 hover:bg-gray-200/10 hover:text-accent transition-all duration-300 rounded-sm'>Projects</Link>
+                                <Link to="/projects" className='uppercase text-white font-medium px-4 py-2 hover:bg-gray-200/10 hover:text-accent transition-all duration-300 rounded-sm'>Projects</Link>
                             </li>
                             <li className='ml-8'>
                                 <Link to="/" className='uppercase text-white font-medium px-4 py-2 hover:bg-gray-200/10 hover:text-accent transition-all duration-300 rounded-sm'>Contact</Link>
@@ -44,7 +44,7 @@ function Navbar() {
                         <Link to="/" className='uppercase font-medium px-4 py-2 hover:bg-gray-200/10 hover:text-accent transition-all duration-300 rounded-sm'>About</Link>
                     </li>
                     <li className='ml-8'>
-                        <Link to="/" className='uppercase font-medium px-4 py-2 hover:bg-gray-200/10 hover:text-accent transition-all duration-300 rounded-sm'>Projects</Link>
+                        <Link to="/projects" className='uppercase font-medium px-4 py-2 hover:bg-gray-200/10 hover:text-accent transition-all duration-300 rounded-sm'>Projects</Link>
                     </li>
                     <li className='ml-8'>
                         <Link to="/" className='uppercase font-medium px-4 py-2 hover:bg-gray-200/10 hover:text-accent transition-all duration-300 rounded-sm'>Contact</Link>
