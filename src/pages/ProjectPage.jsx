@@ -45,7 +45,7 @@ function ProjectPage() {
           <div className="flex items-center gap-8">
             {
               data.techStack.map(stack => {
-                return <span key={stack} className='p-4 rounded bg-gray-900/10 font-medium'>{stack}</span>
+                return <span key={stack} className='p-4 uppercase rounded bg-gray-900/10 font-medium'>{stack}</span>
               })
             }
           </div>

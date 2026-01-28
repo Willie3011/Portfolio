@@ -49,13 +49,13 @@ function Footer() {
                         <h3 className='font-semibold text-2xl py-4 tracking-tight'>Contacts</h3>
                         <ul>
                             <li>
-                                <a href="#" className='group'>
+                                <a href="mailto:willemapril33@gmail.com" className='group'>
                                     <span className='font-medium '>Email : </span>
                                     <span className='group-hover:underline transition-all duration-300'>willemapril33@gmail.com</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" className='group'>
+                                <a href="tel:+27813182699" className='group'>
                                     <span className='font-medium '>Phone : </span>
                                     <span className='group-hover:underline transition-all duration-300'>0813182699</span>
                                 </a>
