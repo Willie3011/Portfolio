@@ -3,6 +3,7 @@ import axios from 'axios';
 import Container from '../components/Container';
 import ImageComp from '../components/ImageComp';
 import { useParams } from 'react-router-dom'
+import parse from 'html-react-parser';
 
 const fetchProject = async (id) => {
   const response = await axios.get(`${import.meta.env.VITE_API_URL}/projects/${id}`)
@@ -36,7 +37,7 @@ function ProjectPage() {
         {/* Description */}
         <div className="my-8">
           <h3 className='text-xl sm:text-2xl font-medium mb-4'>Project Description</h3>
-          <p className='text-base sm:text-lg text-primary'>{data.desc}</p>
+          <p className='text-base sm:text-lg text-primary'>{parse(data.desc)}</p>
         </div>
 
         {/* Tech Stack */}
