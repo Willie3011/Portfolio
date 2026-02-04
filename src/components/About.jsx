@@ -5,7 +5,7 @@ import SectionHeading from './SectionHeading';
 import parse from 'html-react-parser';
 
 function About() {
-    const [paragraphs, setParagraphs] = useState([]);
+    const [about, setAbout] = useState("");
     const [skills, setSkills] = useState([]);
     useEffect(() => {
         const fetchAllData = async () => {
@@ -21,9 +21,7 @@ function About() {
                 ])
 
                 if (aboutResponse?.data?.data?.content) {
-                    const paragraphArray = aboutResponse?.data?.data?.content.split('\n\n');
-
-                    setParagraphs(paragraphArray.filter(p => p.trim() !== ''));
+                    setAbout(aboutResponse.data.data.content)
                 }
 
                 if (skillsResponse?.data?.data) {
@@ -47,13 +45,7 @@ function About() {
                     <div className="flex flex-col gap-8">
                         <h3 className='font-bold text-xl capitalize'>This is who I am!</h3>
                         <div className="flex flex-col gap-4">
-                            {
-                                paragraphs && (
-                                    paragraphs.map(paragraph => {
-                                        return <p className='text-primary' key={paragraph}>{parse(paragraph)}</p>
-                                    })
-                                )
-                            }
+                            {about && (parse(about))}
                         </div>
                         <button className='bg-accent hover:bg-amber-400 text-white font-medium py-4 px-12 rounded-lg w-fit transition-all ease-in-out duration-300 hover:-translate-y-1 cursor-pointer'>Contact</button>
                     </div>
