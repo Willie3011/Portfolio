@@ -33,7 +33,7 @@ function ProjectPage() {
         {/* Overview / */}
 
         {/* Image */}
-        <ImageComp src={data.image.filePath} className="object-contain" />
+        <ImageComp src={data.image?.filePath} className="object-contain" />
         {/* Description */}
         <div className="my-8">
           <h3 className='text-xl sm:text-2xl font-medium mb-4'>Project Description</h3>
