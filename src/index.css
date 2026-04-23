@@ -16,3 +16,11 @@
 @utility col-center {
     @apply flex flex-col justify-center items-center;
 }
+
+.hamburger {
+    @apply flex-col gap-1.5 cursor-pointer bg-none p-1.5 
+}
+
+.hamburger span {
+    @apply block w-6 h-0.5 bg-accent rounded-xs transition-all duration-300
+}

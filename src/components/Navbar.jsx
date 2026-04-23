@@ -28,11 +28,15 @@ function Navbar() {
                             </li>
                         </ul>
                     </nav>
-                    <button className={`md:hidden block w-8 h-8 text-white transition-all duration-300 ${openMobileMenu ? "rotate-180" : ""}`}
+                    <button className={`md:hidden flex hamburger transition-all duration-300`}
                         onClick={() => {
                             setOpenMobileMenu(prev => !prev);
                         }}
-                    >{openMobileMenu ? <IoMdClose className={`w-full h-full`} /> : <IoMenu className='w-full h-full' />}</button>
+                    >
+                        <span className={`${openMobileMenu ? 'translate-y-2 rotate-45' : "translate-y-0 rotate-0"}`}></span>
+                        <span className={`${openMobileMenu ? 'opacity-0' : ""}`}></span>
+                        <span className={`${openMobileMenu ? '-translate-y-2 -rotate-45' : "translate-y-0 rotate-0"}`}></span>
+                    </button>
                 </div>
             </Container>
             <nav>
