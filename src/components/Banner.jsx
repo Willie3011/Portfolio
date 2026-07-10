@@ -1,43 +1,49 @@
-import gsap from 'gsap';
+import { useState } from 'react';
 import { SplitText } from 'gsap/all'
-import { useGSAP } from '@gsap/react'
 import Container from './Container'
 
 function Banner() {
-
-    useGSAP(() => {
-        const titleSplit = new SplitText(".title", { type: "words" });
-        const paragraphSplit = new SplitText(".subtitle", { type: "lines" });
-
-        gsap.from(titleSplit.words, {
-            yPercent: 100,
-            duration: 1.8,
-            ease: "expo.out",
-            stagger: 0.06,
-        })
-
-        gsap.from(paragraphSplit.lines, {
-            opacity: 0,
-            yPercent: 100,
-            duration: 1,
-            ease: "expo.out",
-            stagger: 0.06,
-            delay: 1,
-        })
-    }, [])
+    const [username, setUsername] = useState("Willem April");
+    const [tagline, setTagline] = useState("A passionate web developer who builds real-world projects whilst constantly improving my skills while creating meaningful applications.")
 
     return (
-        <section className="bg-primary text-white px-0 py-16 text-center flex-center min-h-200">
-            <Container>
-                <h1 className='title uppercase font-bold mb-4 text-4xl md:text-5xl'>Hey I'm Willem April</h1>
-                <p className='subtitle text-lg md:text-xl max-w-200 my-0 mx-auto text-secondary mb-4'>I am a passionate web developer who enjoys learning through building real-world projects. I’m constantly improving my skills while creating meaningful applications.</p>
-                <div className="flex-center gap-4 pt-4 max-sm:flex-col">
-                    <a href="/Willem_April.pdf" download>
-                        <button className='inline-block px-8 sm:px-12 py-4 border border-accent rounded-lg font-medium text-base text-accent bg-transparent text-nowrap hover:bg-accent hover:text-white transition-all duration-300 cursor-pointer hover:-translate-y-1 hover:shadow-lg'>Download CV</button>
-                    </a>
-                    <button className='inline-block px-8 sm:px-12 py-4 bg-accent hover:bg-amber-400 font-medium text-white transition-all duration-300 text-nowrap cursor-pointer text-base border-none rounded-lg hover:-translate-y-1 hover:shadow-lg'>View Projects</button>
+        <section className="min-h-dvh bg-black text-white flex">
+            <div className="container relative flex flex-col h-full gap-32 sm:gap-64">
+                {/* top */}
+                <div className="h-full flex flex-col items-center justify-center md:items-start text-center md:text-left">
+                    <h1 className="text-[clamp(80px,16vw,280px)] md:text-[clamp(120px,16vw,280px)] font-Barlow font-bold tracking-tight uppercase text-transparent bg-clip-text bg-linear-to-r from-white/95 via-gray-400 to-white">{username}</h1>
+                    <p className="text-[clamp(20px,2.5vw,24px)] font-Barlow text-text-secondary md:max-w-150 uppercase">
+                        {tagline}
+                    </p>
                 </div>
-            </Container>
+                {/* bottom */}
+                <div className="md:absolute md:left-0 md:right-0 md:-bottom-1/5 flex justify-between items-center flex-wrap gap-4 py-6 px-0 border-t border-white/6 text-xs font-normal tracking-[0.03em] max-md:flex-col max-md:items-start max-md:gap-2.5 max-md:py-6">
+
+                    {/* copyright */}
+                    <span className="flex items-center gap-1.5 max-md:w-full max-md:justify-between">
+                        <span className="text-[0.7rem] tracking-[0.08em] font-medium text-[#6b6b6b] uppercase">
+                            ©
+                        </span>
+                        <span className="text-[#a0a0a0] font-normal">2026</span>
+                    </span>
+                    {/* based in */}
+                    <span className="flex items-center gap-1.5 max-md:w-full max-md:justify-between">
+                        <span className="text-[0.7rem] tracking-[0.08em] font-medium text-[#6b6b6b] uppercase">
+                            Based In
+                        </span>
+                        <span className="text-[#a0a0a0] font-normal">Gauteng</span>
+                    </span>
+                    {/* Role */}
+                    <span className="flex items-center gap-1.5 max-md:w-full max-md:justify-between">
+                        <span className="text-[0.7rem] tracking-[0.08em] font-medium text-[#6b6b6b] uppercase">
+                            role
+                        </span>
+                        <span className="text-[#a0a0a0] font-normal">Full-Stack Developer</span>
+                    </span>
+
+
+                </div>
+            </div>
         </section>
     )
 }
