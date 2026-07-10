@@ -1,10 +1,7 @@
-import { useState } from 'react';
-import { SplitText } from 'gsap/all'
-import Container from './Container'
 
 function Banner() {
-    const [username, setUsername] = useState("Willem April");
-    const [tagline, setTagline] = useState("A passionate web developer who builds real-world projects whilst constantly improving my skills while creating meaningful applications.")
+    const username ="Willem April";
+    const tagline = "A passionate web developer who builds real-world projects whilst constantly improving my skills while creating meaningful applications.";
 
     return (
         <section className="min-h-screen bg-black text-white flex">

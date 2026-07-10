@@ -66,5 +66,5 @@ body {
 }
 
 .hamburger span {
-    @apply block w-6 h-0.5 bg-accent rounded-xs transition-all duration-300
+    @apply block w-6 h-0.5 bg-white rounded-xs transition-all duration-300
 }
