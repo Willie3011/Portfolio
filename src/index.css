@@ -1,20 +1,64 @@
-@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import "tailwindcss";
 
 @theme {
-    --font-Poppins: 'Poppins', sans-serif;
+    --font-Inter: "Inter", sans-serif;
+    --font-Barlow: "Barlow Condensed", sans-serif;
     --color-primary:#423e37;
     --color-secondary:#edebd7;
+    --color-text-secondary: #ffffff90;
     --color-accent:#e3b23c;
     --color-gray:#6e675f;
 }
 
-@utility flex-center {
-    @apply flex justify-center items-center;
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
 }
 
-@utility col-center {
-    @apply flex flex-col justify-center items-center;
+::-webkit-scrollbar-track {
+    background: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-accent);
+    border-radius: 10px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0px auto;
+    padding: 1rem;
+}
+
+@layer components {
+    .nav-link {
+        @apply font-Barlow text-[1.075rem] font-medium tracking-tight uppercase no-underline relative py-1;
+        @apply text-text-secondary transition-colors duration-300 ease-[cubix-bezier(0.25,0.46,0.45,0.94)];
+    }
+}
+
+.nav-link:hover {
+    @apply text-white;
+}
+
+.nav-link::after {
+    content: "";
+    @apply absolute left-0 -bottom-0.5 w-0 h-0.5 bg-accent;
+    @apply transition-[width] duration-300 ease-[cubix-bezier(0.25,0.46,0.45,0.94)];
+}
+
+
+.nav-link:hover::after {
+    @apply w-full;
 }
 
 .hamburger {
