@@ -47,9 +47,9 @@ function Navbar() {
                 {/* right */}
                 <ul className='hidden items-center gap-8 md:flex'>
                     <li><Link className='nav-link' to='/'>Home</Link></li>
-                    <li><Link className='nav-link' to='/about'>About</Link></li>
-                    <li><Link className='nav-link' to='/work'>My Work</Link></li>
-                    <li><Link className='nav-link' to='/contact'>Let's Connect</Link></li>
+                    <li><Link className='nav-link' to='/#about'>About</Link></li>
+                    <li><Link className='nav-link' to='/projects'>My Work</Link></li>
+                    <li><Link className='nav-link' to='/#contact'>Let's Connect</Link></li>
                 </ul>
 
                 {/* mobile menu button */}
@@ -60,18 +60,18 @@ function Navbar() {
                 </button>
             </div>
 
-            <ul className={`absolute z-10 overflow-y-hidden top-20 right-0 left-0 md:hidden bg-black text-white flex w-full h-screen text-xl ${openMobileMenu ? 'translate-x-0' : 'translate-x-full'} shadow flex-col text-left px-3 py-12 gap-8 transition-transform duration-300 ease-in-out`}>
+            <ul className={`absolute z-10 overflow-y-hidden top-16 right-0 left-0 md:hidden bg-black text-white flex w-full h-screen text-xl ${openMobileMenu ? 'translate-x-0' : 'translate-x-full'} shadow flex-col text-left px-3 py-12 gap-8 transition-transform duration-300 ease-in-out`}>
                 <li className='ml-8'>
-                    <Link to="/" className='uppercase font-medium px-4 py-2 hover:bg-gray-200/10 hover:text-accent transition-all duration-300 rounded-sm'>Home</Link>
+                    <Link to="/" className='uppercase font-medium px-4 py-2 hover:bg-gray-200/10 hover:text-accent transition-all duration-300 rounded-sm' onClick = {() => setOpenMobileMenu(false)}>Home</Link>
                 </li>
                 <li className='ml-8'>
-                    <Link to="/" className='uppercase font-medium px-4 py-2 hover:bg-gray-200/10 hover:text-accent transition-all duration-300 rounded-sm'>About</Link>
+                    <Link to="/#about" className='uppercase font-medium px-4 py-2 hover:bg-gray-200/10 hover:text-accent transition-all duration-300 rounded-sm' onClick={() => setOpenMobileMenu(false)}>About</Link>
                 </li>
                 <li className='ml-8'>
-                    <Link to="/projects" className='uppercase font-medium px-4 py-2 hover:bg-gray-200/10 hover:text-accent transition-all duration-300 rounded-sm'>Projects</Link>
+                    <Link to="/projects" className='uppercase font-medium px-4 py-2 hover:bg-gray-200/10 hover:text-accent transition-all duration-300 rounded-sm' onClick = {() => setOpenMobileMenu(false)}>Projects</Link>
                 </li>
                 <li className='ml-8'>
-                    <Link to="/" className='uppercase font-medium px-4 py-2 hover:bg-gray-200/10 hover:text-accent transition-all duration-300 rounded-sm'>Contact</Link>
+                    <Link to="/#contact" className='uppercase font-medium px-4 py-2 hover:bg-gray-200/10 hover:text-accent transition-all duration-300 rounded-sm' onClick = {() => setOpenMobileMenu(false)}>Contact</Link>
                 </li>
             </ul>
 
