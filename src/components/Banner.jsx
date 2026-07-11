@@ -1,7 +1,7 @@
 
 function Banner() {
     const username ="Willem April";
-    const tagline = "A passionate web developer who builds real-world projects whilst constantly improving my skills while creating meaningful applications.";
+    const tagline = "Passionate web developer building real-world projects & creating meaningful applications.";
 
     return (
         <section className="min-h-screen bg-black text-white flex">
